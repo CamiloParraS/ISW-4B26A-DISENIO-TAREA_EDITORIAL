@@ -5,53 +5,57 @@ import models.Disco;
 public class App {
     public static void main(String[] args) {
 
-        // LIBRO COSAS
-        String titulo;
-        double Precio;
+        // Atributos para Libro
+        String tituloLibro;
+        double precioLibro;
         int numeroPaginas;
         int anioPublicacion;
-        // DISCO COSAS
-        String tituloDisco;
-        double PrecioDisco;
-        float duracionMinutos;
 
+        // Atributos para Disco
+        String tituloDisco;
+        double precioDisco;
+        float duracionMinutos;
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("================================");
-        System.out.println("welcome to the mogging station");
-        System.out.println("================================\n");
+        System.out.println("========================================");
+        System.out.println("EDITORIAL - La de algo");
+        System.out.println("========================================\n");
 
-        // LIBORSSSSSS
-        System.out.println("===============================");
-        System.out.print("Write the title of the mogging manual:  ");
-        titulo = scanner.nextLine();
-        System.out.print("Write the price of the mogging manual:  ");
-        Precio = scanner.nextDouble();
-        System.out.print("Write the number of pages of the mogging manual:  ");
+        // Entrada de datos para Libro
+        System.out.println("--- Libro ---");
+        System.out.print("Ingrese el título del libro: ");
+        tituloLibro = scanner.nextLine();
+
+        System.out.print("Ingrese el precio: ");
+        precioLibro = scanner.nextDouble();
+
+        System.out.print("Ingrese el numero de paginas: ");
         numeroPaginas = scanner.nextInt();
-        System.out.print("Write the year of publication of the mogging manual:  ");
+
+        System.out.print("Ingrese el año de publicación: ");
         anioPublicacion = scanner.nextInt();
-        System.out.println("===============================\n");
+        System.out.println("-------------------------\n");
 
-        scanner.nextLine(); // Consume the newline left by nextInt()
+        scanner.nextLine(); // Scanner Scans and scans and fails
 
-        System.out.println("================================");
-        System.out.print("Write the title of the mogging album:  ");
+        // Entrada de datos para Disco
+        System.out.println("--- Disco ---");
+        System.out.print("Ingrese el titulo del disco: ");
         tituloDisco = scanner.nextLine();
-        System.out.print("Write the price of the mogging album:  ");
-        PrecioDisco = scanner.nextDouble();
-        System.out.print("Write the duration in minutes of the mogging album:  ");
+
+        System.out.print("Ingrese el precio: ");
+        precioDisco = scanner.nextDouble();
+
+        System.out.print("Ingrese la duracion (minutos): ");
         duracionMinutos = scanner.nextFloat();
-        System.out.println("================================\n");
+        System.out.println("-------------------------\n");
 
         scanner.close();
 
-        // Crear las cosas
-        Libro libro = new Libro(titulo, Precio, numeroPaginas, anioPublicacion);
-        Disco disco = new Disco(tituloDisco, PrecioDisco, duracionMinutos);
+        Libro libro = new Libro(tituloLibro, precioLibro, numeroPaginas, anioPublicacion);
+        Disco disco = new Disco(tituloDisco, precioDisco, duracionMinutos);
 
-        // Mostrar las cosas
         System.out.println(libro);
         System.out.println(disco);
     }
