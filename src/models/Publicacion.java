@@ -29,6 +29,6 @@ public class Publicacion {
 
     @Override
     public String toString() {
-        return "Publicacion{" + "titulo='" + titulo + '\'' + ", precio=" + precio + '}';
+        return "Publicacion = " + "titulo = '" + titulo + '\'' + ", precio = " + precio + '}';
     }
 }

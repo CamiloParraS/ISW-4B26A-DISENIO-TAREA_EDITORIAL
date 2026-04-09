@@ -30,7 +30,7 @@ public class Libro extends Publicacion {
 
     @Override
     public String toString() {
-        return "Libro{" + "numeroPaginas=" + numeroPaginas + ", anioPublicacion=" + anioPublicacion
+        return "Libro =" + " Paginas : " + numeroPaginas + ", Publicado en : " + anioPublicacion
                 + "} " + super.toString();
     }
 }
